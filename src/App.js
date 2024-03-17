@@ -28,7 +28,7 @@ function App() {
   const Checkspell = (text) => {
     for(const[incorrectWord, correctWord] of Object.entries(customDictionary)){
     
-      if(text.match(incorrectWord)){
+      if(text.toLowerCase().match(incorrectWord)){
         setCorrection(`${correctWord}?`);
         return;
       }
